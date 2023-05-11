@@ -41,7 +41,7 @@ class AuthServices {
         "phone": phone,
       });
       Navigator.of(context).pop();
-      Navigator.push(
+      Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const HomeScreen()),
       );
@@ -52,7 +52,7 @@ class AuthServices {
         AwesomeDialog(
                 context: context,
                 title: "Error",
-                body: Text("Password is to weak"))
+                body: const Text("Password is to weak"))
             .show();
       } else if (e.code == 'email-already-in-use') {
         Navigator.of(context).pop();
@@ -68,8 +68,11 @@ class AuthServices {
     }
   }
 
-  Future<void> login(BuildContext context, String email, password,
-     ) async {
+  Future<void> login(
+    BuildContext context,
+    String email,
+    password,
+  ) async {
     try {
       if (password.toString().length < 6) {
         showToast(
@@ -83,10 +86,10 @@ class AuthServices {
           .signInWithEmailAndPassword(email: email, password: password)
           .then((value) {
         Navigator.of(context).pop();
-       Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const HomeScreen()),
-      );
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const HomeScreen()),
+        );
       });
     } on FirebaseAuthException catch (e) {
       Navigator.of(context).pop();
@@ -94,14 +97,14 @@ class AuthServices {
         AwesomeDialog(
                 context: context,
                 title: "Error",
-                body: Text("No user found for that email"))
+                body: const Text("No user found for that email"))
             .show();
       } else if (e.code == 'wrong-password') {
         Navigator.of(context).pop();
         AwesomeDialog(
                 context: context,
                 title: "Error",
-                body: Text("Wrong password provided for that user"))
+                body: const Text("Wrong password provided for that user"))
             .show();
       }
     } catch (e) {
@@ -112,10 +115,10 @@ class AuthServices {
 
   Future<UserModel> getUser(String uid) async {
     try {
-      DocumentSnapshot _doc =
-      await _firestore.collection("Users").doc(uid).get();
+      DocumentSnapshot doc =
+          await _firestore.collection("Users").doc(uid).get();
 
-      return UserModel.fromSnapShot(_doc);
+      return UserModel.fromSnapShot(doc);
     } catch (e) {
       rethrow;
     }

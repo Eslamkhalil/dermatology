@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dermatology1/services/auth.dart';
-import 'package:dermatology1/update.dart';
+import 'package:dermatology1/EditProfilePage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
@@ -69,7 +69,7 @@ class _ProfileState extends State<Profile> {
                     //1
                   ],
                 ),
-                Container(
+                SizedBox(
                   height: 400,
                   child: Stack(
                     alignment: Alignment.bottomCenter,
@@ -87,7 +87,7 @@ class _ProfileState extends State<Profile> {
                       Container(
                         child: Column(
                           children: <Widget>[
-                            Container(
+                            SizedBox(
                               height: 180,
                               width: 180,
                               child:
@@ -138,7 +138,7 @@ class _ProfileState extends State<Profile> {
                                 const SizedBox(
                                   width: 25.0,
                                 ),
-                                Container(
+                                SizedBox(
                                   height: 30,
                                   width: 30,
                                   child: const Image(
@@ -178,7 +178,7 @@ class _ProfileState extends State<Profile> {
                                 const SizedBox(
                                   width: 25.0,
                                 ),
-                                Container(
+                                SizedBox(
                                   height: 30,
                                   width: 30,
                                   child: const Image(
@@ -218,7 +218,7 @@ class _ProfileState extends State<Profile> {
                                 const SizedBox(
                                   width: 17.0,
                                 ),
-                                Container(
+                                SizedBox(
                                   height: 30,
                                   width: 30,
                                   child: const Image(
@@ -244,7 +244,7 @@ class _ProfileState extends State<Profile> {
                             const SizedBox(
                               height: 20.0,
                             ),
-                            Container(
+                            SizedBox(
                                 width: 250,
                                 height: 40,
                                 child: MaterialButton(
@@ -252,7 +252,8 @@ class _ProfileState extends State<Profile> {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => update()),
+                                          builder: (context) =>
+                                              EditProfilePage(user: userModel!,)),
                                     );
                                   },
                                   color: const Color.fromRGBO(137, 121, 113, 5),

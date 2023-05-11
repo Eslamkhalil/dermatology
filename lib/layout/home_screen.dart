@@ -33,8 +33,13 @@ class _HomeScreenState extends State<HomeScreen> {
             });
           },
           type: BottomNavigationBarType.fixed,
+          fixedColor: Color.fromRGBO(137, 121, 113, 5),
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'AddPost'),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.home,
+                ),
+                label: 'AddPost'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.image), label: 'PickImage'),
             BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),

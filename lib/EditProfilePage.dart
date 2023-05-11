@@ -1,19 +1,12 @@
 import 'package:dermatology1/layout/profile.dart';
+import 'package:dermatology1/model/user.dart';
 import 'package:flutter/material.dart';
 //import 'package:settings_ui/pages/settings.dart';
 
-class update extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Setting UI",
-      home: EditProfilePage(),
-    );
-  }
-}
-
 class EditProfilePage extends StatefulWidget {
+  const EditProfilePage({super.key, required this.user});
+  final UserModel user;
+
   @override
   _EditProfilePageState createState() => _EditProfilePageState();
 }
@@ -23,20 +16,6 @@ class _EditProfilePageState extends State<EditProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        elevation: 1,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back,
-            color: Color.fromRGBO(137, 121, 113, 5),
-          ),
-          onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (BuildContext context) => Profile()));
-          },
-        ),
-      ),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -54,13 +33,13 @@ class _EditProfilePageState extends State<EditProfilePage> {
               SizedBox(
                 height: 55,
               ),
-              
+
               SizedBox(
                 height: 100,
               ),
               buildTextField("Full Name", "", false),
               buildTextField("E-mail", "", false),
-              buildTextField("Password", "", true),
+              // buildTextField("Password", "", true),
               buildTextField("Location", "", false),
               SizedBox(
                 height: 15,
@@ -75,12 +54,12 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         MaterialPageRoute(builder: (context) => Profile()),
                       );
                     },
-                    color: Color.fromRGBO(137, 121, 113, 5),
+                    color: const Color.fromRGBO(137, 121, 113, 5),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
-                    child: Text("save", style: TextStyle(color: Colors.white)),
+                    child: const Text("save",
+                        style: TextStyle(color: Colors.white)),
                   )
-                  
                 ],
               )
             ],

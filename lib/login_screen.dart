@@ -101,22 +101,22 @@ class LoginScreen extends StatelessWidget {
                                 cursorColor: Colors.black,
                               )),
                         ])),
-                Container(
-                    padding: const EdgeInsets.fromLTRB(60, 0, 0, 0),
-                    width: 190.0,
-                    child: MaterialButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => password()),
-                        );
-                      },
-                      child: const Text("Forget Password?",
-                          style:
-                              TextStyle(color: Colors.black54, fontSize: 12.5)),
-                    )),
+                // Container(
+                //     padding: const EdgeInsets.fromLTRB(60, 0, 0, 0),
+                //     width: 190.0,
+                //     child: MaterialButton(
+                //       onPressed: () {
+                //         Navigator.push(
+                //           context,
+                //           MaterialPageRoute(builder: (context) => password()),
+                //         );
+                //       },
+                //       child: const Text("Forget Password?",
+                //           style:
+                //               TextStyle(color: Colors.black54, fontSize: 12.5)),
+                //     )),
                 const SizedBox(
-                  height: 6.5,
+                  height: 10,
                 ),
                 SizedBox(
                     width: 430.0,
