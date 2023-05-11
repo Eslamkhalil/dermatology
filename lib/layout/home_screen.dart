@@ -3,7 +3,7 @@ import 'package:dermatology1/layout/post_screen.dart';
 import 'package:dermatology1/layout/search_scree.dart';
 import 'package:flutter/material.dart';
 
-import 'profile.dart';
+import 'profile/profile.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

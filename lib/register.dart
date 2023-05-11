@@ -2,7 +2,7 @@ import 'package:dermatology1/login_screen.dart';
 import 'package:dermatology1/services/auth.dart';
 import 'package:flutter/material.dart';
 import 'main.dart';
-import 'layout/profile.dart';
+import 'layout/profile/profile.dart';
 
 // late String country_id;
 // List<String> country = [

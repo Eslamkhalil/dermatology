@@ -7,16 +7,17 @@ class UserModel {
   String? lname;
   String? phone;
   String? userProfileImageUrl;
+  String? location;
 
   UserModel({this.id, this.email, this.lname, this.fname, this.phone});
 
   UserModel.fromSnapShot(DocumentSnapshot userSnapShot) {
-    
     id = userSnapShot.id;
     email = userSnapShot['email'];
     fname = userSnapShot['fname'];
     lname = userSnapShot['lname'];
     phone = userSnapShot['phone'];
+    location = userSnapShot['location'];
     userProfileImageUrl = userSnapShot['userProfileImageUrl'];
   }
 
@@ -26,6 +27,7 @@ class UserModel {
     data['fname'] = fname;
     data['lname'] = lname;
     data['phone'] = phone;
+    data['location'] = location;
     data['userProfileImageUrl'] = userProfileImageUrl;
     return data;
   }

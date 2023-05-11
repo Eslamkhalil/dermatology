@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'password.dart';
 //import 'otp.dart';
 import 'register.dart';
-import 'layout/profile.dart';
+import 'layout/profile/profile.dart';
 import 'start.dart';
 
 class LoginScreen extends StatelessWidget {

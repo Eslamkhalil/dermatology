@@ -1,12 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dermatology1/services/auth.dart';
-import 'package:dermatology1/EditProfilePage.dart';
+import 'package:dermatology1/layout/profile/EditProfilePage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../model/user.dart';
+import '../../model/user.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -230,8 +230,8 @@ class _ProfileState extends State<Profile> {
                                 ),
                                 Container(
                                   alignment: AlignmentDirectional.center,
-                                  child: const Text(
-                                    "Egyption",
+                                  child: Text(
+                                    "${userModel?.location}",
                                     style: TextStyle(
                                         color: Colors.black87,
                                         fontSize: 12.0,
@@ -252,8 +252,9 @@ class _ProfileState extends State<Profile> {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) =>
-                                              EditProfilePage(user: userModel!,)),
+                                          builder: (context) => EditProfilePage(
+                                                user: userModel!,
+                                              )),
                                     );
                                   },
                                   color: const Color.fromRGBO(137, 121, 113, 5),
