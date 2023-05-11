@@ -1,0 +1,27 @@
+
+const String txt_appName ='تطبيق الأدمن';
+const String txt_CreateNewAccount ='إنشاء حساب جديد';
+const String txt_login ='تسجيل الدخول';
+const String txt_register ='تسجيل';
+const String txt_home ='الرئيسية';
+const String txt_myAppointment ='حجوزاتي';
+const String txt_Settings ='الإعدادات';
+const String txt_PhoneNumber ='رقم الهاتف';
+const String hint_PhoneNumber ='إدخل رقم الهاتف';
+const String txt_FirstName ='الإسم الأول';
+const String hint_FirstName ='إدخل الإسم الأول';
+const String txt_SecondName ='الإسم الثاني';
+const String hint_SecondName ='إدخل الإسم الثاني';
+const String txt_ThirdName ='الإسم الثالث';
+const String hint_ThirdName ='إدخل الإسم الثالث';
+const String hint_FourName ='إدخل الإسم الرابع';
+const String txt_FourName ='الإسم الرابع';
+const String txt_password ="كلمة المرور";
+const String hint_password ="إدخل كلمة المرور";
+const String hint_email ="إدخل الإيميل";
+const String txt_email ="البريد الالكتروني";
+const String txt_shop ="اسم المعرض";
+const String txt_shop_count ="عدد السيارات";
+const String txt_notInternet ="لايوجد إتصال بالانترنت";
+const String txt_username = 'إسم المستخدم';
+const String hint_username = 'إدخل إسم المستخدم';
